@@ -10,4 +10,4 @@ if __name__ == '__main__':
     ejercicio.displayProperties()
     ejercicio.makeGray()
     ejercicio.colorizeRGB('red')
-    ejercicio.makeHue()
+    ejercicio.makeHue()                                                       #Llama a las funciones respectivas para realizar 
