@@ -39,8 +39,8 @@ class colorImage:
 
     def makeHue(self):
         HSV = cv2.cvtColor(self.image, cv2.COLOR_BGR2HSV)         #Cambia espacio de color de la imagen, pasa de RGB a HSV.
-        HSV[1] = 255                                              #Componente S es fijada en 255 constante.
-        HSV[2] = 255                                              #Componente V es fijada en 255 constante
-        BGR_again = cv2.cvtColor(self.image, cv2.COLOR_HSV2BGR)   #Devuelve la imagen a espacio de color RGB y la guarda en variable.
+        HSV[:, :, 1] = 255                                              #Componente S es fijada en 255 constante.
+        HSV[:, :, 2] = 255                                              #Componente V es fijada en 255 constante
+        BGR_again = cv2.cvtColor(HSV, cv2.COLOR_HSV2BGR)   #Devuelve la imagen a espacio de color RGB y la guarda en variable.
         cv2.imshow('Hue', BGR_again)                              #Muestra imagen modificada en espacio RGB.
         cv2.waitKey(0)
